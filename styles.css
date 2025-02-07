@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+#theme-toggle {
+    cursor: pointer;
+}
+.project-card {
+    background: white;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .project-card {
+    background: #444;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.dark-mode {
+    background: #333;
+    color: #fff;
+}
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+#lang-toggle {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+.dark-mode .modal-content {
+    background: #444;
+    color: white;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#resume-preview {
+    width: 100%;
+    height: 90%;
+    border: none;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#resume-btn {
+    cursor: pointer;
+    background: none;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#resume-btn:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dark-mode #resume-btn {
+    border-color: #4dabf7;
+    color: #4dabf7;
+}
+
+.dark-mode #resume-btn:hover {
+    background: #4dabf7;
+    color: #333;
+}
+
+#constellation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.switch-button {
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    background: #ccc;
+    border: none;
+    transition: background-color 0.3s;
+    padding: 0;
+}
+
+.switch-button::before {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: url('assets/moon.png') no-repeat center center;
+    background-size: cover;
+    transition: transform 0.3s;
+}
+
+.switch-button.active {
+    background: #007bff;
+}
+
+.switch-button.active::before {
+    transform: translateX(25px);
+    background: url('assets/sun.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Remove old emoji span */
+.switch-button span {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f4;
+    transition: .4s;
+    border-radius: 34px;
+    border: 2px solid #ddd;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background: url('assets/flag_uk.png') no-repeat center center;
+    background-size: cover;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #f4f4f4;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background: url('assets/flag_fr.png') no-repeat center center;
+    background-size: cover;
+}
+
+.dark-mode .slider {
+    background-color: #333;
+    border-color: #666;
+}
+
+/* Remove .switch-button styles */
+.theme-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background: url('assets/moon.png') no-repeat center center;
+    background-size: cover;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .theme-slider:before {
+    transform: translateX(26px);
+    background: url('assets/sun.png') no-repeat center center;
+    background-size: cover;
+}
