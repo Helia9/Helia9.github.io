@@ -92,34 +92,35 @@ animate();
 
 const translations = {
     en: {
-        title: "test website",
+        title: "Boris Huynh - Portfolio",
         about: "About Me",
-        aboutText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        aboutText: "I'm Boris Huynh, a software engineering student at EPITECH. Passionate about development since a young age, I love exploring new technologies and solving complex problems. My expertise spans system programming, automation, and game development.",
         projects: "Projects",
-        project1: "Project 1",
-        project1Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        project2: "Project 2",
-        project2Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        project1: "Custom UNIX Commands",
+        project1Desc: "A project where I recreated UNIX commands like `sudo`, `top`, and `ls` using C, reinforcing my understanding of system programming and low-level development.",
+        project2: "Game Development Collection",
+        project2Desc: "A set of games developed in Python and C, including a Doom-like FPS, a Mario-like platformer, and a Space Invader-inspired game. Features include collision handling, raycasting, and procedural generation.",
         contact: "Contact",
-        contactText: "Email: lorem.ipsum@example.com",
+        contactText: "Email: boris6.hh[at]gmail.com | GitHub: github.com/Helia9",
         resume: "📄 CV",
         downloadResume: "Download Resume"
     },
     fr: {
-        title: "site web de test",
+        title: "Boris Huynh - Portfolio",
         about: "À propos de moi",
-        aboutText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        aboutText: "Je suis Boris Huynh, étudiant en ingénierie logicielle à EPITECH. Passionné par le développement depuis plusieurs années, j'aime explorer de nouvelles technologies et relever des défis techniques. Mon expertise couvre la programmation système, l'automatisation et le développement de jeux.",
         projects: "Projets",
-        project1: "Projet 1",
-        project1Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        project2: "Projet 2",
-        project2Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        project1: "Commandes UNIX personnalisées",
+        project1Desc: "Un projet où j'ai recréé des commandes UNIX comme `sudo`, `top` et `ls` en C, renforçant ma compréhension de la programmation système et du développement bas niveau.",
+        project2: "Collection de jeux vidéo",
+        project2Desc: "Une série de jeux développés en Python et en C, incluant un FPS inspiré de Doom, un jeu de plateforme à la Mario et un Space Invader revisité. Fonctionnalités : gestion des collisions, raycasting et génération procédurale.",
         contact: "Contact",
-        contactText: "Email: lorem.ipsum@example.com",
+        contactText: "Email: boris6.hh[at]gmail.com | GitHub: github.com/Helia9",
         resume: "📄 CV",
         downloadResume: "Télécharger le CV"
     }
 };
+
 
 function isMobile() {
     const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
