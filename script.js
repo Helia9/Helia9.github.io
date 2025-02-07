@@ -122,7 +122,8 @@ const translations = {
 };
 
 function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return isMobileDevice;
 }
 
 const themeToggle = document.getElementById("theme-toggle");
@@ -162,9 +163,15 @@ const resumePreview = document.getElementById("resume-preview");
 const downloadBtn = document.getElementById("download-resume");
 
 resumeBtn.onclick = function() {
+    const isMobileDevice = isMobile();
+    const fileFormat = isMobileDevice ? "png" : "pdf";
+    
     modal.style.display = "block";
-    const fileFormat = isMobile() ? "png" : "pdf";
-    resumePreview.src = `assets/resume_${currentLang}.${fileFormat}#toolbar=0&navpanes=0&scrollbar=0`;
+    if (isMobileDevice) {
+        resumePreview.style.transform = "scale(0.75)";
+        resumePreview.style.transformOrigin = "top center";
+    }
+    resumePreview.src = `assets/resume_${currentLang}.${fileFormat}#toolbar=0&navpanes=0&scrollbar=1`;
 }
 
 closeBtn.onclick = function() {
@@ -178,6 +185,7 @@ window.onclick = function(event) {
 }
 
 downloadBtn.onclick = function() {
-    const fileFormat = isMobile() ? "png" : "pdf";
+    const isMobileDevice = isMobile();
+    const fileFormat = isMobileDevice ? "png" : "pdf";
     window.open(`assets/resume_${currentLang}.${fileFormat}`, '_blank');
 }
