@@ -127,23 +127,23 @@ function isMobile() {
 
 const themeToggle = document.getElementById("theme-toggle");
 const langToggle = document.getElementById("lang-toggle");
-let currentLang = "en";
+let currentLang = "fr";
 
+// Set initial state
+document.addEventListener('DOMContentLoaded', () => {
+    langToggle.checked = false; // French is unchecked state
+    updateContent();
+});
 
 document.body.classList.add("dark-mode");
 themeToggle.checked = false;
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateContent(); 
-});
 
 themeToggle.addEventListener("change", () => {
     document.body.classList.toggle("dark-mode");
 });
 
 langToggle.addEventListener("change", () => {
-    currentLang = langToggle.checked ? "fr" : "en";
+    currentLang = langToggle.checked ? "en" : "fr"; // Fixed logic - unchecked is French
     updateContent();
 });
 

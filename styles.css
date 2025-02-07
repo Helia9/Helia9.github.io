@@ -202,7 +202,7 @@ header {
     width: 26px;
     left: 4px;
     bottom: 2px;
-    background: url('assets/flag_uk.png') no-repeat center center;
+    background: url('assets/flag_fr.png') no-repeat center center;
     background-size: cover;
     transition: .4s;
     border-radius: 50%;
@@ -213,8 +213,8 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
-    background: url('assets/flag_fr.png') no-repeat center center;
+    transform: translateX(22px); /* Reduce from 26px to 22px */
+    background: url('assets/flag_uk.png') no-repeat center center;
     background-size: cover;
 }
 
@@ -238,7 +238,7 @@ input:checked + .slider:before {
 }
 
 input:checked + .theme-slider:before {
-    transform: translateX(26px);
+    transform: translateX(22px); /* Reduce from 26px to 22px */
     background: url('assets/sun.png') no-repeat center center;
     background-size: cover;
 }
