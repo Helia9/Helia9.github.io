@@ -167,10 +167,6 @@ resumeBtn.onclick = function() {
     const fileFormat = isMobileDevice ? "png" : "pdf";
     
     modal.style.display = "block";
-    if (isMobileDevice) {
-        resumePreview.style.transform = "scale(0.75)";
-        resumePreview.style.transformOrigin = "top center";
-    }
     resumePreview.src = `assets/resume_${currentLang}.${fileFormat}#toolbar=0&navpanes=0&scrollbar=1`;
 }
 
